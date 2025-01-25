@@ -1,0 +1,81 @@
+@media only screen and (min-width: 42em) {
+ table { margin-left: 2em; }
+}
+
+.site {
+ font-size: 115%;
+ margin: 3em auto 2em;
+ line-height: 1.5em;
+}
+
+.meta {
+  color: #aaa;
+}
+
+body {
+ font-size: larger;
+}
+
+h1 {
+ font-family: Garamond, "Century Schoolbook L", serif;
+}
+
+h2, h3, h4 {
+ font-family: 'Lucida Grande', Verdana, Arial, sans-serif;
+}
+
+h1 [lang|="ar"] {
+ font-family: 'Lucida Grande', Verdana, Arial, Sans-Serif;
+ text-align: right;
+}
+#footer, #header {
+ text-align: center;
+}
+#header {
+ font-family: 'Lucida Grande', Verdana, Arial, sans-serif;
+ overflow:hidden;
+ xxposition:relative;
+ background: #efefef;
+ border-bottom: 1px solid #ccc;
+ padding: 1em;
+}
+#content {
+ max-width: 42em;
+ margin: 1em auto 1em auto;
+}
+#footer {
+ border-top: 1px solid #ccc;
+ background: #efefef;
+ padding: 1em;
+ font-size: smaller;
+}
+#footer a:link, #footer a:visited {
+ text-decoration: none;
+}
+.disabled {
+ color: grey;
+}
+pre, code {
+ font-family: consolas, "Liberation Mono", monospace;
+}
+#harvard-address-footer {
+ margin-bottom: 3em;
+}
+#harvard-required-footer {
+ font-style: italic;
+ font-family: 'Lucida Grande', Verdana, Arial, sans-serif;
+ text-align: right;
+ font-size: smaller;
+}
+.list-horizontal li {
+ display:inline-block;
+}
+.list-horizontal li:before {
+ content: '\00a0\2022\00a0\00a0';
+ color:#999;
+ color:rgba(0,0,0,0.5);
+ font-size:11px;
+}
+.list-horizontal li:first-child:before {
+ content: '';
+}
