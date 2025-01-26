@@ -9,6 +9,7 @@ html, body {
   min-height: 100vh;
   width: 100%;
   overflow-x: hidden; /* Prevents horizontal scrolling */
+  box-sizing: border-box;
 }
 
 /* Ensure Everything is in One Column */
@@ -17,6 +18,7 @@ html, body {
   flex-direction: column !important;
   flex-wrap: nowrap;
   width: 100%;
+  align-items: center;
 }
 
 /* Header */
@@ -33,19 +35,20 @@ html, body {
   justify-content: flex-end; /* Moves text to the bottom */
   align-items: center;
   width: 100%;
-  box-sizing: border-box; /* Ensures no overflow */
+  max-width: 42em; /* Matches content width */
+  box-sizing: border-box;
 }
 
 /* Main Content */
 #content {
   max-width: 42em;
+  width: 100%;
   margin: 0 auto; /* Centers content */
   flex: 2; /* More space for content */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
   padding: 0 1em; /* Add padding to the sides for symmetry */
   box-sizing: border-box;
 }
@@ -63,6 +66,7 @@ html, body {
   align-items: center;
   flex: 1; /* Equal space with header */
   width: 100%;
+  max-width: 42em; /* Matches header width */
   box-sizing: border-box;
 }
 
