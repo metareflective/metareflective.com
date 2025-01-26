@@ -5,17 +5,17 @@ html, body {
   padding: 0;
   font-size: larger;
   display: flex;
-  flex-direction: column !important;
+  flex-direction: column;
   min-height: 100vh;
-  width: 100%;
-  overflow-x: hidden; /* Prevents horizontal scrolling */
+  width: 100vw; /* Ensures no extra margin issues */
+  overflow-x: hidden; /* Prevents unwanted horizontal scrolling */
   box-sizing: border-box;
 }
 
 /* Ensure Everything is in One Column */
 #wrapper, .container {
   display: flex;
-  flex-direction: column !important;
+  flex-direction: column;
   flex-wrap: nowrap;
   width: 100%;
   align-items: center;
@@ -34,22 +34,21 @@ html, body {
   flex-direction: column;
   justify-content: flex-end; /* Moves text to the bottom */
   align-items: center;
-  width: 100%;
-  max-width: 42em; /* Matches content width */
+  width: 100%; /* Ensures it stretches across full screen */
   box-sizing: border-box;
 }
 
 /* Main Content */
 #content {
-  max-width: 42em;
+  max-width: 42em; /* Centers content */
   width: 100%;
-  margin: 0 auto; /* Centers content */
+  margin: 0 auto; /* Keeps it aligned */
   flex: 2; /* More space for content */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 0 1em; /* Add padding to the sides for symmetry */
+  padding: 0 1em; /* Uniform padding */
   box-sizing: border-box;
 }
 
@@ -65,8 +64,7 @@ html, body {
   justify-content: flex-start; /* Moves text to the top */
   align-items: center;
   flex: 1; /* Equal space with header */
-  width: 100%;
-  max-width: 42em; /* Matches header width */
+  width: 100%; /* Stretches fully */
   box-sizing: border-box;
 }
 
