@@ -74,6 +74,7 @@ html, body {
 /* General Text Formatting */
 h1 {
   font-family: Garamond, "Century Schoolbook L", serif;
+  color: purple;
 }
 
 h2, h3, h4 {
