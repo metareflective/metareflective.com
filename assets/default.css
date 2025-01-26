@@ -1,91 +1,114 @@
-@media only screen and (min-width: 42em) {
-  table { margin-left: 2em; }
- }
- 
- .site {
-  font-size: 115%;
-  margin: 3em auto 2em;
-  line-height: 1.5em;
- }
- 
- .meta {
-   color: #aaa;
- }
- 
- body {
-  font-size: larger;
+/* Global Reset */
+html, body {
   margin: 0;
+  padding: 0;
+  font-size: larger;
+  font-family: 'Lucida Grande', Verdana, Arial, sans-serif;
   display: flex;
-  flex-direction: column;
+  flex-direction: column !important;
   min-height: 100vh;
+  width: 100%;
 }
 
+/* Ensure Everything is in One Column */
+#wrapper, .container {
+  display: flex;
+  flex-direction: column !important;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+
+/* Header */
+#header {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  background: linear-gradient(to bottom, lightblue, yellow);
+  border-bottom: 1px solid #ccc;
+  overflow: hidden;
+  flex: 1; /* Equal space with footer */
+  display: flex;
+  flex-direction: column; /* Ensures content inside is vertical */
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+/* Main Content */
 #content {
   max-width: 42em;
-  margin: 1em auto;
-  flex: 1;
+  margin: auto;
+  flex: 2; /* More space for content */
+  display: flex;
+  flex-direction: column; /* Force single column */
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
+/* Footer */
 #footer {
   background: linear-gradient(to bottom, yellow, lightblue);
   border-top: 1px solid #ccc;
   padding: 1em;
   font-size: smaller;
-  display: flex;
-  justify-content: center;
-  align-items: bottom;
-  flex: 1; /* Makes footer expand */
-}
- 
- h1 {
-  font-family: Garamond, "Century Schoolbook L", serif;
- }
- 
- h2, h3, h4 {
-  font-family: 'Lucida Grande', Verdana, Arial, sans-serif;
- }
- 
- h1 [lang|="ar"] {
-  font-family: 'Lucida Grande', Verdana, Arial, Sans-Serif;
-  text-align: right;
- }
- 
- #header, #footer {
   text-align: center;
- }
- 
- #header {
-  background: linear-gradient(to bottom, lightblue, yellow);
-  font-family: 'Lucida Grande', Verdana, Arial, sans-serif;
-  overflow: hidden;
-  position: relative;
-  border-bottom: 1px solid #ccc;
-  padding: 1em;
- }
- 
- #footer a:link, #footer a:visited {
+  display: flex;
+  flex-direction: column; /* Ensures footer content is stacked */
+  justify-content: center;
+  align-items: center;
+  flex: 1; /* Equal space with header */
+  width: 100%;
+}
+
+/* Ensure Tables Don't Affect Layout */
+@media only screen and (min-width: 42em) {
+  table { margin-left: 2em; }
+}
+
+/* Footer Links */
+#footer a {
   text-decoration: none;
- }
- 
- .disabled {
-  color: grey;
- }
- 
- pre, code {
-  font-family: consolas, "Liberation Mono", monospace;
- }
- 
- .list-horizontal li {
+}
+
+/* General Text Formatting */
+h1 {
+  font-family: Garamond, "Century Schoolbook L", serif;
+}
+
+h2, h3, h4 {
+  font-family: 'Lucida Grande', Verdana, Arial, sans-serif;
+}
+
+h1[lang|="ar"] {
+  text-align: right;
+}
+
+/* Lists */
+.list-horizontal li {
   display: inline-block;
- }
- 
- .list-horizontal li:before {
+}
+
+.list-horizontal li:before {
   content: '\00a0\2022\00a0\00a0';
-  color: #999;
   color: rgba(0,0,0,0.5);
   font-size: 11px;
- }
- 
- .list-horizontal li:first-child:before {
+}
+
+.list-horizontal li:first-child:before {
   content: '';
- }
+}
+
+/* Code Blocks */
+pre, code {
+  font-family: Consolas, "Liberation Mono", monospace;
+}
+
+/* Meta and Misc */
+.meta {
+  color: #aaa;
+}
+
+.disabled {
+  color: grey
+}
