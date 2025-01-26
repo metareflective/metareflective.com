@@ -29,9 +29,10 @@ html, body {
   flex: 1; /* Equal space with footer */
   display: flex;
   flex-direction: column; /* Ensures content inside is vertical */
-  justify-content: center;
+  justify-content: flex-end; /* Moves text to the bottom */
   align-items: center;
   width: 100%;
+  padding-bottom: 0.5em; /* Adds slight padding to prevent sticking to the bottom */
 }
 
 /* Main Content */
@@ -55,10 +56,11 @@ html, body {
   text-align: center;
   display: flex;
   flex-direction: column; /* Ensures footer content is stacked */
-  justify-content: center;
+  justify-content: flex-start; /* Moves text to the top */
   align-items: center;
   flex: 1; /* Equal space with header */
   width: 100%;
+  padding-top: 0.5em; /* Adds slight padding to prevent sticking to the top */
 }
 
 /* Ensure Tables Don't Affect Layout */
